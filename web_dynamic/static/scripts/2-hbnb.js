@@ -1,18 +1,20 @@
-$.getJSON("http://0.0.0.0:5001/api/v1/status/?jsoncallback=?", function(data) {
-    console.log(data);
-});
-
 $( document ).ready(() => {
-    let x = [];
-    let amen = [];
-    console.log("hola");
-    /*$.getJSON("http://0.0.0.0:5001/api/v1/status/?callback=?", function(data) {
-      console.log(data.status);
-    });*/
+  let x = [];
+  let amen = [];
+  console.log("hola mundo");
+  $.getJSON("http://0.0.0.0:5001/api/v1/status/", function(data) {
+    if(data["status"] == "OK") {
+      $('DIV#api_status').addClass('available');
+    } else {
+      if($('DIV#api_status available')) {
+        $('DIV#api_status').removeClass('available');
+      }
+    }
+  });
 
   $("input[type='checkbox']").change(function(){
     if(this.checked){
-      alert($(this).attr("data-name"));
+      //console.log($(this).attr("data-name"));
       x.push($(this).attr("data-id"));
       amen.push($(this).attr("data-name"));
       $(".amenities h4").text(amen);
