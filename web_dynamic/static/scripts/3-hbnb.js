@@ -17,14 +17,12 @@ $( document ).ready(() => {
 
   $("input[type='checkbox']").change(function(){
     if(this.checked){
-      //console.log($(this).attr("data-name"));
       x.push($(this).attr("data-id"));
       amen.push($(this).attr("data-name"));
       $(".amenities h4").text(amen);
     }
     else {
       let index = x.indexOf($(this).attr("data-id"));
-      //console.log(index);
       x.splice(index, 1);
       amen.splice(index, 1);
       if (amen.length > 0) {
@@ -33,7 +31,20 @@ $( document ).ready(() => {
         $(".amenities h4").html('&nbsp;');  
       }
     }
-  //console.log(x, amen);
   });
+
+    let request = $.ajax({
+	url: "http://b41de8df0b4c.19.hbtn-cod.io:34196/api/v1/places_search/",
+	method: "POST",
+	data: JSON.stringify({}),
+	contentType: "application/json",
+	dataType: "json"
+	})
+
+	.done(function (result) {
+	    result.forEach(result => {
+		$('section.places').append("<article>" + result.name + "</article>");
+	    });
+	});
 
 });
