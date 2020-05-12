@@ -4,13 +4,14 @@
  */
 
 header {
-	background-color: #FFFFFF;
+	background-color: #EBECF0;
 	background-image: url("../images/logo.png");
 	background-repeat: no-repeat;
 	background-position: 20px 50%;
 	height: 70px;
 	width: 100%;
-	border-bottom: 1px solid #CCCCCC;
+	box-shadow: 10px 10px 12px 0 rgba(0,0,0,.07);
+	border-radius: 0 0 10px 10px;
 }
 
 .available {

@@ -702,6 +702,9 @@
 .fa-group:before,
 .fa-users:before {
   content: "\f0c0";
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, .15), -7px -7px 20px rgba(255, 255, 255, 1), 0px 0px 4px rgba(255, 255, 255, .2);
+  border-radius: 10px;
+  padding: 10px;
 }
 .fa-chain:before,
 .fa-link:before {

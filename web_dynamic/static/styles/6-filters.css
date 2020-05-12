@@ -5,16 +5,18 @@
 
 .container .filters {
 	height: 70px;
-	background-color: #FFFFFF;
+	background-color: EBECF0;
 	width: 100%;
-	border: 1px solid #DDDDDD;
-	border-radius: 4px;
+	border-radius: 15px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: stretch;
 	z-index: 2;
 	position: relative;
+	box-shadow: inset 7px 7px 15px rgba(55, 84, 170, .15),
+              inset -7px -7px 20px rgba(255, 255, 255, 1),
+              inset 0px 0px 4px rgba(255, 255, 255, .2);
 }
 
 .container .filters .locations {
@@ -28,16 +30,26 @@
 
 .container .filters button {
 	font-size: 18px;
-	background-color: #FF5A5F;
-	height: 48px;
-	width: 20%;
+	background-color: #EBECF0;
+	height: 40px;
+	width: 15%;
 	border: none;
-	border-radius: 4px;
+	outline: none;
+	border-radius: 15px;
 	margin: auto 30px auto auto;
+	box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+              -2px -2px 4px rgba(255, 255, 255, .4),
+              2px 2px 2px rgba(255, 255, 255, .05),
+              2px 2px 4px rgba(0, 0, 0, .1);
+
+
 }
 
 .container .filters button:hover {
-	opacity: 0.9;
+        box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+              inset -2px -2px 4px rgba(255, 255, 255, .5),
+              inset 2px 2px 2px rgba(255, 255, 255, .075),
+                    inset 2px 2px 4px rgba(0, 0, 0, .15);
 }
 
 /**
@@ -47,11 +59,13 @@
 .container .filters h2 {
 	font-size: 16px;
 	margin: 10px 0 5px 0;
+	text-shadow: 2px 2px 4px rgba(0,0,0,.3), -2px -2px 4px rgba(255,255,255,1);
 }
 
 .container .filters h3 {
 	font-weight: 600;
 	margin: 12px 0 4px 40px;
+	text-shadow: 2px 2px 4px rgba(0,0,0,.3), -2px -2px 4px rgba(255,255,255,1)
 }
 
 .container .filters h4 {
@@ -80,8 +94,8 @@
 	overflow: scroll;
 	display: none;
 	list-style-type: none;
-	background-color: #FAFAFA;
-	border: 1px solid #DDDDDD;
+	background-color: #EBECF0;
+	box-shadow: inset 7px 7px 15px rgba(55, 84, 170, .15), inset -7px -7px 20px rgba(255, 255, 255, 1), inset 0px 0px 4px rgba(255, 255, 255, .2);
 	border-radius: 4px;
 	padding: 30px 40px 40px 30px;
 	margin: 15px -1px 0 -1px;
